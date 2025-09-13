@@ -39,8 +39,7 @@
             </div>
             <div class="about-col-2">
                 <h1 class="sub-title">About Me</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed nulla nibh, tincidunt sit amet sapien quis, elementum molestie tellus. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Mauris eleifend magna id ante convallis mattis. Quisque in sem tristique, dictum sapien et, accumsan libero.</p>
-
+                <p id="typewriter-about" class="typewriter-text"></p>
                 <div class="tab-titles">
                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
                     <p class="tab-links" onclick="opentab('experience')">Experience</p>
@@ -196,7 +195,7 @@
 
 </script>
 <script>
-    const scriptURL = '< add you own link here >' // add your own app script link here
+    const scriptURL = '< add you own link here >' // add app script link here
     const form = document.forms['submit-to-google-sheet']
     const msg = document.getElementById("msg")
   
@@ -213,5 +212,51 @@
         .catch(error => console.error('Error!', error.message))
     })
   </script>
+
+  <!-- <--------------typewriter effect--------------------------> 
+   <script>
+//  about me text
+const aboutText = `I am a recent Computer Science graduate with a focus on Software Engineering, based in Philadelphia, PA. With a strong passion for technology, I am actively engaged in machine learning, data science, full-stack development, and fintech solutions. My enthusiasm for AI and emerging technologies drives me to continuously learn and stay updated on industry trends, ensuring I deliver innovative and impactful solutions to complex challenges.
+
+In addition to my technical expertise, I bring extensive customer service and sales experience, complemented by strong soft skills, including communication, collaboration, and problem-solving. These abilities enable me to connect with stakeholders and contribute effectively to team-driven projects. As an avid outdoor enthusiast, I draw inspiration from nature to fuel my creativity and adaptability in both professional and personal pursuits.
+
+I am excited to join a dynamic team where I can contribute my skills, collaborate on real-world projects, and continue to grow by learning from new challenges and opportunities in the ever-evolving tech landscape.`;
+
+// Typewriter function
+function typeWriter(element, text, speed = 30) {
+    element.innerHTML = '';
+    element.classList.add('typing');
+    
+    let i = 0;
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        } else {
+            element.classList.remove('typing');
+            element.classList.add('complete');
+        }
+    }
+    type();
+}
+
+// This will start or should sStart when about section comes into view
+let hasStarted = false;
+function checkScroll() {
+    const aboutSection = document.getElementById('about');
+    const rect = aboutSection.getBoundingClientRect();
+    
+    if (!hasStarted && rect.top < window.innerHeight && rect.bottom > 0) {
+        hasStarted = true;
+        const typewriterElement = document.getElementById('typewriter-about');
+        typeWriter(typewriterElement, aboutText, 25);
+    }
+}
+
+window.addEventListener('scroll', checkScroll);
+window.addEventListener('load', checkScroll);
+</script>
+
 </body>
 </html>
