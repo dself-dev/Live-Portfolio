@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Card Game</title>
+    <link rel="stylesheet" href="card.css">
+</head>
+<body>
+    <div class="text">Pic any number on the board and remember the row that contains your number. Then click the button for that row.(click row button where you number is) The cards will shuffle — repeat this each time you see your number until the game reveals it!</div>
+    <button id="shuffleButton" style="margin-top: 20px; padding: 10px 20px; border: none; background-color: #3498db; color: white; cursor: pointer; border-radius: 5px; font-size: 16px;">Shuffle Cards</button>
+    
+    <!-- <div class="row-buttons">
+        <button class="row-btn" id="row-1">Row 1</button>
+        <button class="row-btn" id="row-2">Row 2</button>
+        <button class="row-btn" id="row-3">Row 3</button>
+        <button class="row-btn" id="row-4">Row 4</button>
+        <button class="row-btn" id="row-5">Row 5</button>
+        <button class="row-btn" id="row-6">Row 6</button>
+        <button class="row-btn" id="row-7">Row 7</button>
+    </div> -->
+    <div class="row-buttons">
+  <button class="row-btn" id="row-1">Column 1</button>
+  <button class="row-btn" id="row-2">Column 2</button>
+  <button class="row-btn" id="row-3">Column 3</button>
+  <button class="row-btn" id="row-4">Column 4</button>
+  <button class="row-btn" id="row-5">Column 5</button>
+  <button class="row-btn" id="row-6">Column 6</button>
+  <button class="row-btn" id="row-7">Column 7</button>
+</div>
+
+    <div class="game-board">
+        <!-- Row 1 -->
+        <div class="card" id="card-1">1</div>
+        <div class="card" id="card-2">2</div>
+        <div class="card" id="card-3">3</div>
+        <div class="card" id="card-4">4</div>
+        <div class="card" id="card-5">5</div>
+        <div class="card" id="card-6">6</div>
+        <div class="card" id="card-7">7</div>
+        <!-- Row 2 -->
+        <div class="card" id="card-8">8</div>
+        <div class="card" id="card-9">9</div>
+        <div class="card" id="card-10">10</div>
+        <div class="card" id="card-11">11</div>
+        <div class="card" id="card-12">12</div>
+        <div class="card" id="card-13">13</div>
+        <div class="card" id="card-14">14</div>
+        <!-- Row 3 -->
+        <div class="card" id="card-15">15</div>
+        <div class="card" id="card-16">16</div>
+        <div class="card" id="card-17">17</div>
+        <div class="card" id="card-18">18</div>
+        <div class="card" id="card-19">19</div>
+        <div class="card" id="card-20">20</div>
+        <div class="card" id="card-21">21</div>
+        <!-- Row 4 -->
+        <div class="card" id="card-22">22</div>
+        <div class="card" id="card-23">23</div>
+        <div class="card" id="card-24">24</div>
+        <div class="card" id="card-25">do not pick</div>
+        <div class="card" id="card-26">26</div>
+        <div class="card" id="card-27">27</div>
+        <div class="card" id="card-28">28</div>
+        <!-- Row 5 -->
+        <div class="card" id="card-29">29</div>
+        <div class="card" id="card-30">30</div>
+        <div class="card" id="card-31">31</div>
+        <div class="card" id="card-32">32</div>
+        <div class="card" id="card-33">33</div>
+        <div class="card" id="card-34">34</div>
+        <div class="card" id="card-35">35</div>
+        <!-- Row 6 -->
+        <div class="card" id="card-36">36</div>
+        <div class="card" id="card-37">37</div>
+        <div class="card" id="card-38">38</div>
+        <div class="card" id="card-39">39</div>
+        <div class="card" id="card-40">40</div>
+        <div class="card" id="card-41">41</div>
+        <div class="card" id="card-42">42</div>
+        <!-- Row 7 -->
+        <div class="card" id="card-43">43</div>
+        <div class="card" id="card-44">44</div>
+        <div class="card" id="card-45">45</div>
+        <div class="card" id="card-46">46</div>
+        <div class="card" id="card-47">47</div>
+        <div class="card" id="card-48">48</div>
+        <div class="card" id="card-49">49</div>
+    </div>
+ 
+    <script src="practice2.js"></script>
+</body>
+</html>

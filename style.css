@@ -58,7 +58,7 @@ nav ul li a::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #e84bd8;
     position: absolute;
     left: 0;
     bottom: -6px;
@@ -76,7 +76,7 @@ nav ul li a:hover::after{
     margin-top: 20px;
 }
 .header-text h1 span{
-    color: #ff004f;
+    color: #49ea46;
 }
 /* -----------about--------------- */
 #about{
@@ -121,7 +121,7 @@ nav ul li a:hover::after{
     content: '';
     width: 0;
     height: 3px;
-    background: #ff004f;
+    background: #49ea46;
     position: absolute;
     left: 0;
     bottom: -8px;
@@ -137,7 +137,7 @@ nav ul li a:hover::after{
     margin: 10px 0;
 }
 .tab-contents ul li span{
-    color: #b54769;
+    color: #49ea46;
     font-size: 14px;
 }
 .tab-contents{
@@ -149,7 +149,7 @@ nav ul li a:hover::after{
 
 /* Typewriter effect styles */
 .typewriter-text {
-    border-right: 2px solid #ff004f;
+    border-right: 2px solid #49ea46;
     padding-right: 5px;
     min-height: 300px; /* Adjust based on your content */
 }
@@ -160,7 +160,7 @@ nav ul li a:hover::after{
 
 @keyframes blink-cursor {
     0%, 50% { 
-        border-right-color: #ff004f; 
+        border-right-color: #49ea46; 
     }
     51%, 100% { 
         border-right-color: transparent; 
@@ -206,7 +206,7 @@ nav ul li a:hover::after{
     display: inline-block;
 }
 .services-list div:hover{
-    background: #ff004f;
+    background: #49ea46;
     transform: translateY(-10px);
 }
 /* -------portfolio Projects----------- */
@@ -234,7 +234,7 @@ nav ul li a:hover::after{
 .layer{
     width: 100%;
     height: 0;
-    background: linear-gradient(rgba(0,0,0,0.6), #ff004f);
+    background: linear-gradient(rgba(0,0,0,0.6), #49ea46);
     border-radius: 10px;
     position: absolute;
     left: 0;
@@ -255,7 +255,7 @@ nav ul li a:hover::after{
 }
 .layer a{
     margin-top: 20px;
-    color: #ff004f;
+    color: #49ea46;
     text-decoration: none;
     font-size: 18px;
     line-height: 60px;
@@ -275,7 +275,7 @@ nav ul li a:hover::after{
     display: block;
     margin: 50px auto;
     width: fit-content;
-    border: 1px solid #ff004f;
+    border: 1px solid #49ea46;
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
@@ -283,7 +283,7 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 .btn:hover{
-    background: #ff004f;
+    background: #49ea46;
 }
 
 /* ---------contact-------- */
@@ -297,7 +297,7 @@ nav ul li a:hover::after{
     margin-top: 30px;
 }
 .contact-left p i{
-    color: #ff004f;
+    color: #5ee731;
     margin-right: 15px;
     font-size: 25px;
 }
@@ -313,12 +313,12 @@ nav ul li a:hover::after{
     transition: transform 0.5s;
 }
 .social-icons a:hover{
-    color: #ff004f;
+    color: #49ea46;
     transform: translateY(-5px);
 }
 .btn.btn2{
     display: inline-block;
-    background: #ff004f;
+    background: #49ea46;
 }
 .contact-right form{
     width: 100%;
@@ -349,10 +349,10 @@ form .btn2{
     margin-top: 20px;
 }
 .copyright i{
-    color: #ff004f;
+    color: #49ea46;
 }
 .copyright a{
-    color: #ff004f;
+    color: #49ea46;
     text-decoration: none;
 }
 /* -----------------css for small screens--------- */
@@ -376,7 +376,7 @@ nav .fas{
         font-size: 25px;
     }
     nav ul{
-        background: #ff004f;
+        background: #49ea46;
         position: fixed;
         top: 0;
         right: -200px;
@@ -423,4 +423,16 @@ nav .fas{
     color: #61b752;
     margin-top: -40px;
     display: block;
+}
+/* Make the card game project image smaller */
+.work img[src*="cardgameSmallpic.png"] {
+    width: 55%;             
+    margin: 0 auto;
+    display: block;
+    transform: scale(0.9);  /* i thnk this should give me a gentle shrink */
+    transition: transform 0.3s ease;
+}
+
+.work img[src*="cardgameSmallpic.png"]:hover {
+    transform: scale(1);    /* same hover zoom as others up top this should override waht i did earler above */
 }
